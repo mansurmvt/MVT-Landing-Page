@@ -1,0 +1,22 @@
+{
+  "name": "mvt-landing-page-monorepo",
+  "version": "1.0.0",
+  "description": "Monotonic Vector Technology Full-Stack Enterprise Platform",
+  "private": true,
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "backend": "node backend/src/server.js",
+    "backend:dev": "node --watch backend/src/server.js",
+    "install:all": "cd backend && npm install"
+  },
+  "keywords": [
+    "monotonic-vector-technology",
+    "saas",
+    "vector-intelligence",
+    "full-stack",
+    "express",
+    "rest-api"
+  ],
+  "author": "Monotonic Vector Technology",
+  "license": "ISC"
+}

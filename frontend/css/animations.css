@@ -1,0 +1,106 @@
+/* ==========================================================================
+   ANIMATIONS & KEYFRAMES
+   ========================================================================== */
+
+/* Traveling Border Light Beam around Brand Wrapper */
+@keyframes beamRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pulsating Beacon */
+@keyframes pulseBeacon {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.35);
+  }
+}
+
+/* Breathing "Big and Small" Pulse Animation */
+@keyframes pulseBigSmall {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 35px rgba(0, 240, 255, 0.4), inset 0 0 20px rgba(0, 240, 255, 0.3);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 55px rgba(0, 240, 255, 0.75), inset 0 0 30px rgba(0, 240, 255, 0.55);
+  }
+}
+
+.pulse-big-small {
+  animation: pulseBigSmall 3.2s ease-in-out infinite;
+}
+
+/* Gentle Float Animation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.float-gentle {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+/* Flowing Signal Line Energy */
+@keyframes energyFlow {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.circuit-energy-flow {
+  animation: energyFlow 1.2s linear infinite;
+}
+
+/* Story Energy Line Tracing */
+@keyframes tracePath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Rotating Disc */
+@keyframes rotateDisc {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Counter-Rotating Nodes */
+@keyframes counterRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Cat Assistant Ear Twitch / Online Glow */
+@keyframes catGlow {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.5), inset 0 0 15px rgba(0, 240, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(0, 240, 255, 0.9), inset 0 0 25px rgba(0, 240, 255, 0.6);
+  }
+}
