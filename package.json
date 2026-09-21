@@ -1,22 +1,31 @@
 {
-  "name": "mvt-landing-page-monorepo",
-  "version": "1.0.0",
-  "description": "Monotonic Vector Technology Full-Stack Enterprise Platform",
+  "name": "mvt-website",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "node backend/src/server.js",
-    "backend": "node backend/src/server.js",
-    "backend:dev": "node --watch backend/src/server.js",
-    "install:all": "cd backend && npm install"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
-  "keywords": [
-    "monotonic-vector-technology",
-    "saas",
-    "vector-intelligence",
-    "full-stack",
-    "express",
-    "rest-api"
-  ],
-  "author": "Monotonic Vector Technology",
-  "license": "ISC"
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "framer-motion": "^13.1.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.2",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.4",
+    "eslint": "^10.8.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.3",
+    "globals": "^17.7.0",
+    "vite": "^8.2.0"
+  }
 }

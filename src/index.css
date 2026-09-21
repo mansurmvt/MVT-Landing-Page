@@ -1,0 +1,500 @@
+@import "tailwindcss";
+
+/* ================================
+   BASE & TYPOGRAPHY
+================================ */
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #07162f;
+  color: #0a183f;
+  font-family:
+    "Plus Jakarta Sans",
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* ================================
+   MVT INTRO ANIMATION
+=============================== */
+
+@keyframes logoRise {
+  0% {
+    transform: translateY(120vh);
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes textRise {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes lineGrow {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 45px;
+  }
+}
+
+@keyframes introFade {
+  0% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+
+/* ================================
+   ANIMATED BLUE BACKGROUND
+================================ */
+
+@keyframes auroraDrift {
+  0% {
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: hue-rotate(15deg);
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+}
+
+@keyframes blueOrbFloat1 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.45;
+  }
+  33% {
+    transform: translate3d(40px, -30px, 0) scale(1.15);
+    opacity: 0.65;
+  }
+  66% {
+    transform: translate3d(-30px, 25px, 0) scale(0.95);
+    opacity: 0.4;
+  }
+}
+
+@keyframes blueOrbFloat2 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.35;
+  }
+  40% {
+    transform: translate3d(-45px, 35px, 0) scale(1.2);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translate3d(25px, -20px, 0) scale(0.9);
+    opacity: 0.3;
+  }
+}
+
+@keyframes blueOrbFloat3 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate3d(30px, 40px, 0) scale(1.18);
+    opacity: 0.7;
+  }
+}
+
+@keyframes gridGlowPulse {
+  0%, 100% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 0.12;
+  }
+}
+
+@keyframes cyberLightRay {
+  0% {
+    transform: translateY(-100%) rotate(35deg);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.35;
+  }
+  80% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateY(200%) rotate(35deg);
+    opacity: 0;
+  }
+}
+
+
+/* ================================
+   UPWARD GROWTH ARROW ANIMATIONS
+================================ */
+
+@keyframes growthPathDraw {
+  0% {
+    stroke-dashoffset: 600;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  85% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 600;
+    opacity: 0;
+  }
+}
+
+@keyframes arrowGlowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.8)) drop-shadow(0 0 16px rgba(66, 165, 245, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(0, 229, 255, 1)) drop-shadow(0 0 28px rgba(66, 165, 245, 0.9));
+  }
+}
+
+@keyframes apexEnergyBurst {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.4);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes radarWave {
+  0% {
+    r: 6;
+    opacity: 0.9;
+  }
+  100% {
+    r: 28;
+    opacity: 0;
+  }
+}
+
+@keyframes ascendTrail {
+  0% {
+    opacity: 0.2;
+    transform: translateY(10px) scale(0.98);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0.2;
+    transform: translateY(10px) scale(0.98);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeReverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes letterRevealFade {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.92);
+    filter: blur(4px);
+  }
+  20%, 82% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+  92%, 100% {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.96);
+    filter: blur(2px);
+  }
+}
+
+@keyframes timelineStreamBeam {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(600%);
+    opacity: 0;
+  }
+}
+
+@keyframes stepBoxBreathing {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 25px 35px -5px rgba(0, 229, 255, 0.25), 0 0 25px rgba(0, 229, 255, 0.2);
+  }
+}
+
+@keyframes snakeMove10s {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  65% {
+    top: 96%;
+    opacity: 1;
+  }
+  75% {
+    top: 96%;
+    opacity: 0;
+  }
+  100% {
+    top: 0%;
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardFlyIn {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+/* ================================
+   PREMIUM GLASSMORPHISM
+================================ */
+
+.glass-blue-hero {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(13, 71, 161, 0.45), transparent 70%),
+    radial-gradient(circle 800px at 85% 30%, rgba(66, 165, 245, 0.2), transparent 60%),
+    radial-gradient(circle 600px at 15% 70%, rgba(0, 229, 255, 0.15), transparent 55%),
+    linear-gradient(180deg, #050e20 0%, #07162f 50%, #081d3d 100%);
+}
+
+.glass-premium-card {
+  background: rgba(10, 28, 64, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(66, 165, 245, 0.25);
+  box-shadow:
+    0 25px 60px -15px rgba(3, 10, 28, 0.7),
+    0 0 35px -5px rgba(66, 165, 245, 0.15),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.glass-premium-card-active {
+  border-color: rgba(0, 229, 255, 0.45);
+  box-shadow:
+    0 30px 70px -15px rgba(3, 10, 28, 0.8),
+    0 0 45px -5px rgba(0, 229, 255, 0.25),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.2);
+}
+
+
+/* ================================
+   SELECTION & SCROLLBAR
+================================ */
+
+::selection {
+  background: #00E5FF;
+  color: #07162f;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07162f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1b3563;
+  border-radius: 999px;
+  border: 2px solid #07162f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #42A5F5;
+}
+
+:focus-visible {
+  outline: 2px solid #00E5FF;
+  outline-offset: 3px;
+}
+
+
+/* ================================
+   REDUCED MOTION
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
